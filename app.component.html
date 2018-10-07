@@ -1,0 +1,40 @@
+<table>
+<tr>
+	<th></th>
+	<th>ItemName</th>
+	<th>Quantity</th>
+	<th>Price</th>
+</tr>
+<tr>
+	<td><input type="checkbox" (click)="eggqtydisabled=!eggqtydisabled;bookqtydisabled=true;penqtydisabled=true;pencilqtydisabled=true;"> </td>
+	<td> egg</td>
+	<td><input type="number" [(ngModel)]="eggqty" [disabled]="eggqtydisabled" (input)="computeprice()"></td>
+	<td><input type="number" disabled [(ngModel)]="eggprice"></td>
+
+</tr>
+<tr>
+	<td><input type="checkbox" (click)="bookqtydisabled=!bookqtydisabled;penqtydisabled=true;pencilqtydisabled=true;"> </td>
+	<td> book</td>
+	<td><input type="number" [(ngModel)]="bookqty" [disabled]="bookqtydisabled" (input)="computeprice()"></td>
+	<td><input type="number" disabled [(ngModel)]="bookprice"></td>
+
+</tr>
+<tr>
+	<td><input type="checkbox" (click)="penqtydisabled=!penqtydisabled" > </td>
+	<td> pen</td>
+	<td><input type="number" [(ngModel)]="penqty" [disabled]="penqtydisabled" (input)="computeprice()"></td>
+	<td><input type="number" disabled [(ngModel)]="penprice"></td>
+
+</tr>
+<tr>
+	<td><input type="checkbox" (click)="pencilqtydisabled=!pencilqtydisabled"> </td>
+	<td> pencil</td>
+	<td><input type="number" [(ngModel)]="pencilqty"  [disabled]="pencilqtydisabled" (input)="computeprice()"></td>
+	<td><input type="number" disabled [(ngModel)]="pencilprice"></td>
+
+</tr>
+
+<tr>
+	<td colspan="4"> Total money you pay:{{totalamount}}</td>
+</tr>
+</table>
